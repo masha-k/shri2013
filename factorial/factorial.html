@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h2>функция, которая выводит список всех чисел, которые равны сумме факториалов своих цифр.</h2>
+		<script>
+			function fact(n){
+				if(n <= 0){
+					return 1;
+				} else {
+					return n * fact(n-1);
+				}
+			}
+			function calcFactDigits(n){
+				nStr = n.toString();
+				var sum = 0;
+				for (var i = 0; i < nStr.length; i++){
+					sum = sum + fact(parseInt(nStr[i]));				}
+				return sum;
+			}
+			// max possible factorion < 2540160
+			// to do - вставить ссылку http://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%BE%D0%BD
+			function Factorions(){
+				for (var i = 1; i < 2540160; i++){
+					if (i == calcFactDigits(i)){
+						alert (i);
+					}
+				}
+				
+			}
+			Factorions();
+			
+		</script>
+	</body>
+</html>

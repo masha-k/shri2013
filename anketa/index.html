@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Анкета</title>
+		<link type="text/css" rel="stylesheet" href="css/normalize.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
+		<link type="text/css" rel="stylesheet" href="css/js.css">
+		<script src="http://yandex.st/jquery/2.0.3/jquery.min.js"></script>
+		<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+	</head>
+	<body>
+		<h2 class="bigTtl">Анкета второй школы разработки интерфейсов в Москве</h2>
+		<form id="anketa" action="submit.html" method="post"><fieldset>
+			<table class="QuestTbl">
+			<tr>
+				<td colspan="2"><h2>Заполните анкету</h2></td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 1</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Год рождения</p>
+					<textarea class="QuestTbl_textBlock" type="number" pattern="[0-9]{2,4}" name="question_1" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 2</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Город, в котором вы живете</p>
+					<textarea class="QuestTbl_textBlock" name="question_2" pattern="[а-яА-Яa-zA-Z].[а-яА-Яa-zA-Z0-9 -]*" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 3</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">ВУЗ, факультет, специальность, кафедра</p>
+					<textarea class="QuestTbl_textBlock" name="question_3" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 4</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Год окончания вуза.</p>
+					<textarea class="QuestTbl_textBlock" name="question_4" type="number" maxlength="4" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 5</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Уровень владения английским языком:</p>
+					<ul class="englishLevel">
+						<li class="englishLevel_item">
+							<label><input type="radio" name="question_5_level" required="required" value="beginner"> начальный;</label>
+						</li>
+						<li class="englishLevel_item">
+							<label><input type="radio" name="question_5_level" required="required" value="intermediate"> средний;</label>
+						</li>
+						<li class="englishLevel_item">
+							<label><input type="radio" name="question_5_level" required="required" value="fluent"> свободное владение.</label>
+						</li>
+					</ul>
+					<textarea class="QuestTbl_textBlock" name="question_5"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 6</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Чего вы ожидаете от участия в школе?</p>
+					<textarea class="QuestTbl_textBlock" name="question_6" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 7</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Откуда вы о нас узнали?</p>
+					<textarea class="QuestTbl_textBlock" name="question_7" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 8</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Сколько времени вы были бы готовы уделять стажировке или работе в Яндексе?</p>
+					<textarea class="QuestTbl_textBlock" name="question_8" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 9</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Расскажите о вашем опыте разработки. Нам будет интересно всё — как серьезный интерфейс, так и просто домашняя страничка.</p>
+					<textarea class="QuestTbl_textBlock" name="question_9" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 10</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Если вы где-нибудь работали, расскажите, какие у вас были должностные обязанности и был ли опыт работы в команде.</p>
+					<textarea class="QuestTbl_textBlock" name="question_10" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 11</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Перечислите, какими программными продуктами вы пользуетесь в своей работе — от редактора до специализированных утилит (Intellij Idea, Node.js, Uglify.js, GNU Make). Для каждого инструмента укажите, какие задачи вы с помощью него решаете и почему выбрали именно его.</p>
+					<textarea class="QuestTbl_textBlock" name="question_11" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 12</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Пользуетесь ли вы командной строкой? Какими командами вы пользуетесь и какие задачи вы решаете с их помощью? С какими программами вы преимущественно или полностью взаимодействуете через интерфейс командной строки?</p>
+					<textarea class="QuestTbl_textBlock" name="question_12" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 13</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Напишите на JavaScript функцию, которая выводит список всех чисел, которые равны сумме факториалов своих цифр. Пример такого числа:<br>
+						4! + 0! + 5! + 8! + 5! = 40585<br>
+						В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net/">http://jsfiddle.net/</a> с вашим кодом или на ваш репозиторий на <a href="https://github.com/">https://github.com/</a>.</p>
+					<textarea class="QuestTbl_textBlock" type="url" name="question_13" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 14</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">Вы — пилот грузового межгалактического корабля. Ваша работа — перевозка грузов с одной планету на другую. Грузоподъемность вашего корабля ограничена, поэтому за один рейс вы можете перевезти не более N кг полезного груза. Ваш корабль умеет сообщать свое состояние (местоположение и степень загруженности), а также летать в любую точку пространства. Каждая планета может содержать на себе груз, который можно взять. Также на каждой планете груз можно оставить.<br>
+						<b>Задание</b><br>
+						Даны незавершенные интерфейсы корабля и планеты. Напишите недостающий код.<br>
+						Полное условие задачи доступно на<br>
+						<a href="https://github.com/yandex-shri/introtask-space">https://github.com/yandex-shri/introtask-space</a>.<br>
+						В качестве ответа на вопрос пришлите ссылку на <a href="http://jsfiddle.net/">http://jsfiddle.net/</a> с вашим кодом или на ваш репозиторий на <a href="https://github.com/">https://github.com/</a>.</p>
+					<textarea class="QuestTbl_textBlock" type="url" name="question_14" required="required"></textarea>
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl">Вопрос 15</td>
+				<td class="QuestTbl_td">
+					<p class="questDescr bold">
+						Сверстайте форму-анкету с нашими заданиями для кандидатов. Страница должна работать в следующих браузерах: MSIE (8, 9, 10), Google Chrome (26, 27), Firefox (20, 21), Opera (12.15, 12.14), Яндекс.Браузер 1.5. По возможности используйте приёмы безопасной деградации CSS. Страница должна содержать интерактив, реализованный с помощью JS и jQuery. Это может быть:</p>
+					<ul class="questionList">
+						<li class="questionList_item">проверка полноты и правильности заполнения полей (где это возможно);</li>
+						<li class="questionList_item">возможность свернуть и развернуть разделы (аккордеон);</li>
+						<li class="questionList_item">индикатор заполнения анкеты;</li>
+						<li class="questionList_item">что-нибудь ещё.</li>
+					</ul>
+					<p class="bold">Подумайте над тем, как эти данные будут отправляться на сервер.</p>
+					<p class="bold">Будет плюсом, если вы сверстаете страницу, используя БЭМ.</p>
+					<p class="bold">Дополнительные задания</p>
+					<p class="bold">1. Выполните задание про форму-анкету, используя один из классических шаблонизаторов: Handlebars, mustache, Dust, Jade и т.п.</p>
+					<p class="bold">2. Выполните задание про форму-анкету, используя один из экзотических шаблонизаторов: XSLT, YATE, BEMHTML и т.п.</p>
+					<p class="bold">Разработку необходимо вести на <a href="https://github.com/">https://github.com/</a>. В качестве ответа на вопрос пришлите ссылку на проект.</p>
+					<textarea class="QuestTbl_textBlock" name="question_15" required="required"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><h2>Расскажите нам о себе</h2></td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl QuestTbl_td_ttl_about">Резюме до 250 Кб</td>
+				<td class="QuestTbl_td"><input type="file" name="resume"></td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl QuestTbl_td_ttl_about">Ссылка на профиль в Моем Круге</td>
+				<td class="QuestTbl_td">
+					<input type="text" name="url" class="aboutInput">
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl QuestTbl_td_ttl_about">Имя, Фамилия</td>
+				<td class="QuestTbl_td">
+					<input type="text" name="name" class="aboutInput" required="required">
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl QuestTbl_td_ttl_about">Телефон</td>
+				<td class="QuestTbl_td">
+					<input type="text" name="phone" class="aboutInput">
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl QuestTbl_td_ttl_about bold">E-mail</td>
+				<td class="QuestTbl_td">
+					<input type="text" name="email" class="aboutInput" required="required">
+				</td>
+			</tr>
+			<tr class="QuestTbl_tr">
+				<td class="QuestTbl_td QuestTbl_td_ttl QuestTbl_td_ttl_about">Дополнительные сведения</td>
+				<td class="QuestTbl_td">
+					<textarea name="additional_data"></textarea>
+					<p>Откуда вы узнали о нашем предложении</p>
+					<select class="formSelect" name="howDoYouKnow" required="required" data-message="&darr;&nbsp;Укажите, пожалуйста, откуда вы узнали о нашем предложении.&nbsp;&darr;">
+						<option class="formSelect_item" value="" data-message="Нужно выбрать одно из значений">Выбрать</option>
+						<option class="formSelect_item" value="hr">от HR-менеджера Яндекса</option>
+						<option class="formSelect_item" value="yasub">Я.Субботник</option>
+						<option class="formSelect_item" value="yac">Yet another Conference</option>
+						<option class="formSelect_item" value="anotherConf">на другой конференции</option>
+						<option class="formSelect_item" value="search">из поиска</option>
+						<option class="formSelect_item" value="recomendation">по рекомендации</option>
+						<option class="formSelect_item formSelect_item_yes" value="other">другое</option>
+					</select>
+					<input type="text" name="other_descr" class="aboutInput aboutInput_select" style="display: none;">
+					<label class="iamagree">
+						<input type="checkbox" class="iamagree_input" required="required" name="iamagree" data-message="&darr;&nbsp;Подтвердите, пожалуйста, своё согласие на передачу анкеты с вашими персональными данными.&nbsp;&darr;">&nbsp;
+						Я даю свое согласие на передачу в ООО «ЯНДЕКС» резюме и/или анкеты, содержащих мои персональные данные, и согласен с тем, что они будут храниться в ООО «ЯНДЕКС» в течение 5 лет и будут обрабатываться исключительно для целей предложения мне вакансий группы компаний «ЯНДЕКС», в соответствии с Федеральным законом «О персональных данных».
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Отправить анкету">
+				</td>
+			</tr>
+		</table>
+		</fieldset></form>
+		<script>
+			//надеюсь jquery tools будет достаточно 
+			$.tools.validator.localize("ru", {	
+				'*'         : '&darr;&nbsp;Заполните поле правильно&nbsp;&darr;',
+				':number'   : '&darr;&nbsp;Пожалуйста, вводите только цифры&nbsp;&darr;',	
+				':url'		: '&darr;&nbsp;Сюда вводить только ссылку&nbsp;&darr;',
+				'[max]'	 	: '&darr;&nbsp;Слишком длинное, максимум $1&nbsp;&darr;',
+				'[min]'		: '&darr;&nbsp;Слишком короткое, минимум $1&nbsp;&darr;',
+				'[required]': '&darr;&nbsp;Это поле обязательно для заполнения&nbsp;&darr;',
+				':radio'    : '&darr;&nbsp;Выберите одно из значений&nbsp;&darr;'
+			});
+ 
+			$("#anketa").validator({ 
+				lang: 'ru',
+				position: 'top left',
+				offset: [10, -10]
+			});	
+			$('.formSelect').on('change',function(){
+     			var selection = $(this).val();
+    			switch(selection){
+    				case "other":
+    				$(".aboutInput_select").show()
+  					break;
+    				default:
+    				$(".aboutInput_select").hide()
+    			}
+			});
+			// fix for radio buttons in firefox
+			$(":radio[required]").change(function (el){
+				var inputs = $(":radio[required]").validator();
+				inputs.data("validator").checkValidity();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+#anketa {
+    padding:15px 20px;
+    color:#000;
+    width:700px;
+    margin:0 auto;
+    position:relative;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+}
+
+#anketa fieldset {
+    border:0;
+    margin:0;
+    padding:0;
+}
+
+#anketa h3 { color:#003153; margin-top:0px; }
+
+.error {
+    height:15px;
+    font-size:11px;
+    padding:10px 10px;
+    color:#ff0033;
+    display:none;
+}
+.invalid, input.invalid[type="checkbox"] {border: 1px solid #ff0033;}
+select.invalid {border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
+.error p {
+    margin:0;
+}
+
+label {
+    display:block;
+    font-size:100%;
+    color:#003153;
+}

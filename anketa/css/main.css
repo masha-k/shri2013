@@ -1,0 +1,23 @@
+body {font: 0.8em Arial, Helvetica, sans-serif}
+.bigTtl {text-align: center;}
+a {color: #0000ff;}
+a:hover {color: #9966cc;}
+a:visited {color: #660066;}
+textarea {width: 95%; height: 5em; resize: vertical; border:1px solid #444; background-color:#fff; padding:5px;
+    color:#666; font-size:100%; border-radius: 4px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+.bold {font-weight: bold;}
+.QuestTbl {margin: 0 auto; width: 500px;}
+.QuestTbl_tr {vertical-align: top;}
+.QuestTbl_td {vertical-align: top; padding: 2.4em 0 1em;}
+.QuestTbl_td_ttl {padding: 2.4em 0.5em 1em 0; width: 20%;}
+.QuestTbl_td_ttl_about {width: 30%; padding-right: 0.8em;}
+.questDescr {margin: 0 0 0.5em;}
+.QuestTbl_textBlock {margin-top: 1em;}
+.QuestTbl_textBlock:focus {color:#003153;}
+.englishLevel {list-style-type: none; padding: 1em 1em 0;}
+.englishLevel_item {margin-bottom: 0.4em;}
+.aboutInput {width: 250px; height: 24px; border: 1px solid #444; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;}
+.aboutInput_select {position: absolute; margin: 1em;}
+.formSelect {margin: 1em 0 1.8em; display: inline-block;}
+
+
